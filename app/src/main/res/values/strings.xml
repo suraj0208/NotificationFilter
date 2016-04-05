@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Notification Filter</string>
+    <string name="title_activity_main_drawer">MainDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="socialappstitle">Social Apps</string>
+    <string name="otherappstitle">Other Apps</string>
+    <string name="statstitle">Statistics</string>
+    <string name="analysismenuitem">Analysis</string>
+    <string name="graphtitle">Graph</string>
+</resources>

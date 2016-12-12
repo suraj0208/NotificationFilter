@@ -73,7 +73,7 @@ public class NLService extends NotificationListenerService {
         spamDetectorREs.add("hbd[a-z\\s]*");
 
         // happy Birthday and happy diwali, sankrant etc
-        spamDetectorREs.add("hap[p]*[iey]+[\\sa-zA-Z0-9]+");
+        spamDetectorREs.add("hap[p]*[iey]+[\\sa-zA-Z0-9.]+");
 
 
         //thank you

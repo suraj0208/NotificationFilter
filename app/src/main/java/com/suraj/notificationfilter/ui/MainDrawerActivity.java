@@ -33,15 +33,21 @@ public class MainDrawerActivity extends AppCompatActivity
     private OtherAppsFragment otherAppsFragment;
     private StatisticsFragment statisticsFragment;
 
-    private static int currentPostion;
+    private static MenuItem currentMenuItem;
     private SharedPreferences settings;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
+
         settings = getSharedPreferences(MainDrawerActivity.PREFS_NAME, 0);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -63,6 +69,11 @@ public class MainDrawerActivity extends AppCompatActivity
 
         if (!isNotificationServiceRunning()) {
             showMessage();
+        }
+
+        //code to restore fragment
+        if(savedInstanceState!=null  && currentMenuItem !=null){
+            this.onNavigationItemSelected(currentMenuItem);
         }
 
 
@@ -141,6 +152,7 @@ public class MainDrawerActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        currentMenuItem=item;
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
